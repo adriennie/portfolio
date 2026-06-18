@@ -1,0 +1,7 @@
+# Project 9: AI + AI Architect — Enterprise AI Integration Gateway
+
+    Build a unified API gateway that routes requests to multiple AI providers (OpenAI, Anthropic, a local Ollama model) based on cost, latency, and task-type routing rules. Includes a configuration-driven architecture (YAML-defined routing logic), a Redis-backed caching layer to avoid redundant API calls, rate limiting per client API key, fallback chains (if OpenAI fails → route to Claude), cost tracking per request logged to a dashboard, and a Streamlit admin panel. Format: WebApp + API service (FastAPI gateway + Streamlit dashboard).
+
+    Covers: OOP at architect level (provider abstraction layer, router interface, concrete provider implementations), pydantic for config validation and request/response contracts, async execution (concurrent provider health checks, non-blocking cache lookups), structured logging with correlation IDs across the full request trace, file system automation (pathlib for config file management), dependency resolution concepts (isolating provider SDKs to avoid conflicts), error catching with fallback chains (try multiple providers, finally log outcome).
+
+    Swiss value: This is literally what AI Solutions Architects design at enterprise scale. Swiss firms (Zühlke, Ergon, SIX Group) need architects who think about provider lock-in, cost governance, and system resilience — not just models. This project is a direct conversation-opener for Solutions Architect and AI Platform Engineer roles.
