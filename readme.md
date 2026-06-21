@@ -22,7 +22,7 @@ Each project is self-contained — clone, install, run.
 | # | Project | Category | Stack |
 | --- | --- | --- | --- |
 | 01 | [FeedDigest](FeedDigest/readme.md) | AI Engineering | Python, httpx, dotenv |
-| 02 | [CSV Data Sanitizer](2/readme.md) | Data Engineering | pandas, pathlib, logging |
+| 02 | [Curator](curator/readme.md) | Data Engineering | pandas, pathlib, logging |
 | 03 | [Expense Dashboard](3/readme.md) | AI Engineering | Streamlit, pandas |
 | 04 | [RAG Chatbot](4/readme.md) | AI Engineering | FastAPI, LangChain, Qdrant |
 | 05 | [Automated ML Pipeline](5/readme.md) | MLOps | sklearn, logging, shutil |
