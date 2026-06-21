@@ -1,35 +1,26 @@
 # Changelog
 
-## v1.1.2
+## v1.1.0 : Added or Changed
 
-### Added or Changed
-- Change license to Unlicense; releasing the project fully into the public domain
-- Add simplified project cover image
+- Added `--output <path>` flag for Markdown export of summary reports
+- Append (not overwrite) behavior for repeated runs to the same output file
+- Added empty/insufficient article text detection — skips low-content articles instead of sending blank input to the LLM
+- Updated README with `--output` usage example
 
+## v1.0.1 : Added or Changed
 
-## v1.1.1
+- Switched test provider from Hugging Face to Groq due to free-tier Inference API instability
+- Verified end-to-end run against live BBC RSS feed (5/5 articles summarized)
 
-### Added or Changed
-- Fixed back to top alignment (revert changes)
+## v1.0.0 : Added or Changed
 
-
-## v1.1.0
-
-### Added or Changed
-- Fixed back to top link alignment deprecated tag, use CSS style instead
-- Added contrib.rocks to show top contributors
-
-
-## v1.0.0
-
-### Added or Changed
-- Added this changelog :)
-- Fixed typos in both templates
-- Back to top links
-- Added more "Built With" frameworks/libraries
-- Changed table of contents to start collapsed
-- Added checkboxes for major features on roadmap
-
-### Removed
-
-- Some packages/libraries from acknowledgements I no longer use
+- Initial CLI: RSS fetch (`feedparser` + `requests`) and parsing
+- Provider-agnostic LLM adapter supporting OpenAI, Anthropic, Hugging Face, Groq, Ollama, and custom OpenAI-compatible endpoints
+- `build_payload`, `build_headers`, `parse_response` adapter functions per provider
+- Config loading via `.env` with fail-fast validation (missing provider, missing key, missing base URL for custom)
+- `--feed` (repeatable), `--limit`, `--provider` CLI flags
+- Truncation of article input via `MAX_INPUT_CHARS` (default 4000)
+- Graceful error handling: skips bad feeds/articles on network failure, timeout, malformed JSON, or parse errors without crashing
+- No-feed usage message with exit code `1`
+- `.env.example` template and `.gitignore` coverage for secrets
+- Secrets never printed to console (no raw headers, responses, or stack traces)
