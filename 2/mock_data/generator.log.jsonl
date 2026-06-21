@@ -1,0 +1,1 @@
+{"timestamp": "2026-06-21T18:40:41.935770+00:00", "level": "INFO", "event": "mock_data_generated", "trace_id": "62d96e1b9ff54e3ba3c8fd66dfbcc870", "logger": "DataCurationPipeline", "rows": 5000, "artifact": "mock_data/mock_data.csv"}
